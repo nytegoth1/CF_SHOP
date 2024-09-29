@@ -2,16 +2,15 @@
 <br>ColdFusion Shop<br></h1>
 
 <h1 align="center">Fully functional store/shop create with ColdFusion</h1>
-I decided to create this repository for someone that may want to learn a little about VUE.JS.
-The project contains a paginated news feed called from a json file with a search function.
-If you have a news.api key, you can use it instead of the json that is being called. Comments are
-in the code for a guide.
+A fully functional shop/store built with ColdFusion.
+Currently working on the admin section.
 
 ## DISCLAIMER
-Temporary product photos are a copyright by Amazon <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1206px-Amazon_logo.svg.png" width="180" height="60">
+
 
 ## NOTES
 
-1.
-2.
-3.
+1. This shop was created to show how to build on online store in ColdFusion.
+2. If someone were to implement this code, Using a secure encryption is Highly suggested. 
+3. This was built using CF, and mysql. If someone wanted to change the DB type, this can easily be done if you know how to do so.
+4. Most of the code was done within a week, and is currently using methods that would need to change if implemented in a production environment.
