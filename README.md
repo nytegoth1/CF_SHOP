@@ -7,6 +7,9 @@ Currently working on the admin section.
 
 ## DISCLAIMER
 
+This code was created to possibly give someone insight on using ColdFusion, specifically on using components via createObject.
+For the sake of time, I used This code in no way should be used in a production enviroment unless further code editing be done.
+
 ## INSTALLATION
 
 1. Install ColdFusion Developement version.
