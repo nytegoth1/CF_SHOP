@@ -13,7 +13,7 @@ Currently working on the admin section.
 2. Istall MySQL
 3. In the ColdFusion admin, go to Data & Services
 4. Add data source named: cfshopping_cart, select valid driver type: MySql
-![alt text](https://github.com/nytegoth1/CF_SHOP/cfadminscreen.jpg?raw=true)
+![alt text](https://github.com/nytegoth1/CF_SHOP/blob/main/cfadminscreen.jpg?raw=true)
 5. 
 
 ## NOTES
