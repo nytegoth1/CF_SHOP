@@ -10,6 +10,6 @@
 <cfcookie name="user" expires="now">
 
 
-<cfoutput>You have been logged out. <a href="login.cfm">Login again</a>.</cfoutput>
-
+<!--- <cfoutput>You have been logged out. <a href="login.cfm">Login again</a>.</cfoutput> --->
+<cflocation url="index.cfm">
 </cfif>
