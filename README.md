@@ -20,7 +20,9 @@ Some encrypting suggestions are: Argon2 or Bcrypt, combined with salt.
 4. Add data source named: cfshopping_cart, select valid driver type: MySql. Edit the created data source, and fill in your MySql info.
 
 ![alt text](https://github.com/nytegoth1/CF_SHOP/blob/main/cfadminscreen.jpg?raw=true)
-5. 
+5. Use the provided dumped sql to install.
+6. Copy files to a directory in your wwwroot.
+7. Navigate to the index, and and click signup.
 
 ## NOTES
 
@@ -32,3 +34,4 @@ Some encrypting suggestions are: Argon2 or Bcrypt, combined with salt.
 ## Todo
 
 Redo the admin section for adding products, and create an Edit product feature.
+Fix some other minor issues.
