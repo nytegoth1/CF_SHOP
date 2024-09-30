@@ -17,12 +17,11 @@ Some encrypting suggestions are: Argon2 or Bcrypt, combined with salt.
 1. Install ColdFusion Developement version.
 2. Istall MySQL
 3. In the ColdFusion admin, go to Data & Services
-4. Add data source named: cfshopping_cart, select valid driver type: MySql. Edit the created data source, and fill in your MySql info.
-
-![alt text](https://github.com/nytegoth1/CF_SHOP/blob/main/cfadminscreen.jpg?raw=true)
+4. Add data source named: cfshopping_cart, select valid driver type: MySql. Edit the created data source, and fill in your MySql info. ![alt text](https://github.com/nytegoth1/CF_SHOP/blob/main/cfadminscreen.jpg?raw=true)
 5. Use the provided dumped sql to install.
 6. Copy files to a directory in your wwwroot.
 7. Navigate to the index, and and click signup.
+8. To add single products, navigate to /admin. (Note: I am in the process of making this more robust. For now it is a simple process.)
 
 ## NOTES
 
