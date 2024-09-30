@@ -7,6 +7,9 @@ Currently working on the admin section.
 
 ## DISCLAIMER
 
+## INSTALLATION
+
+1.
 
 ## NOTES
 
