@@ -21,6 +21,7 @@ Some encrypting suggestions are: Argon2 or Bcrypt, combined with salt.
 5. Use the provided dumped sql to install.
 6. Copy files to a directory in your wwwroot.
 7. Navigate to the index, and and click signup.
+8. To add single products, navigate to /admin. (Note: I am in the process of making this more robust. For now it is a simple process.)
 
 ## NOTES
 
