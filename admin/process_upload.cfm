@@ -1,5 +1,5 @@
 
-<cfset filePath = 'http://' & CGI.HTTP_HOST & '/cfstore/admin/uploads/' & CFFILE.SERVERFILE>
+<cfset filePath = 'http://' & CGI.HTTP_HOST & '/CF_SHOP/admin/uploads/' & CFFILE.SERVERFILE>
 
     <cfquery name="insertImage" datasource="cfshopping_cart">
         INSERT INTO products (productimage, name, description, price, stock, featured, sale_price, onsale, category)
