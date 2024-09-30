@@ -9,7 +9,9 @@ Currently working on the admin section.
 
 ## INSTALLATION
 
-1.
+1. Install ColdFusion Developement version.
+2. Istall MySQL
+3. In the ColdFusion admin, go to Data & Services
 
 ## NOTES
 
