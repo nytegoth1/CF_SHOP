@@ -1,8 +1,8 @@
 <h1 align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adobe_ColdFusion_logo_2021.svg/240px-Adobe_ColdFusion_logo_2021.svg.png" width="80" height="80">
 <br>ColdFusion Shop<br></h1>
 
-<h1 align="center">Fully functional store/shop create with ColdFusion</h1>
-A fully functional shop/store built with ColdFusion.
+<h1 align="center">Store/shop created with ColdFusion</h1>
+Shop/store built with ColdFusion and mysql.
 Currently working on the admin section.
 
 ## DISCLAIMER
