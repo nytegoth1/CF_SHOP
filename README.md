@@ -7,8 +7,9 @@ Currently working on the admin section.
 
 ## DISCLAIMER
 
+(This would be an intermediate sample of code, Much of the code I have done in the past is much more advanced.)
 This code was created to possibly give someone insight on using ColdFusion, specifically on using components via createObject.
-This code in no way should be used in a production enviroment unless further code editing be done.
+The code in no way should be used in a production enviroment unless further code editing be done.
 For the sake of time, I used sha256 encryption, and using cookies to remember user. These properties should be changed if someone would use the code in a Prod enviroment.
 Some encrypting suggestions are: Argon2 or Bcrypt, combined with salt.
 
