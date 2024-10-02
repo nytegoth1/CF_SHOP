@@ -55,20 +55,6 @@
 </head>
 <body>
 
-<!---
-<form action="authenticate_user.cfm" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    
-    <button type="submit">Login</button>
-</form>
---->
-<!--- User.cfc?method=authenticateUser" --->
-<!--- <form role="form" action="authenticate_user.cfm" method="post" id="form1"> --->
-
 <div class="section">
     <div class="col-lg-5 mb-lg-auto">
         <div class=""></div>

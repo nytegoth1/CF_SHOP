@@ -48,25 +48,11 @@
 </style>
 <link href="vendor/font-awsome2/css/all.min.css" rel="stylesheet">
 <link href="style/style.css" rel="stylesheet">
+    <style>
+      <cfinclude template="./style/style.css" />
+    </style>
 </head>
 <body>
-
-<!---
-<form action="register_user.cfm" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <button type="submit">Register</button>
-</form>
---->
-
-
 
 <div class="section">
     <div class="col-lg-5 mb-lg-auto">
@@ -79,7 +65,7 @@
                 <form role="form" action="register_user.cfm" method="post" id="form1">
                     <div class="form-group input-group input-group-alternative">
                         <div class="input-group-prepend">
-                            <span class="input-group-text"
+                            <span class="input-group-text input-group-textx"
                                 ><i class="fas fa-user"></i
                             ></span>
                         </div>
@@ -94,7 +80,7 @@
                     </div>
                     <div class="form-group input-group input-group-alternative">
                         <div class="input-group-prepend">
-                            <span class="input-group-text"
+                            <span class="input-group-text input-group-textx"
                                 ><i class="fab fa-expeditedssl"></i
                             ></span>
                         </div>
@@ -111,7 +97,7 @@
 
                     <div class="form-group input-group input-group-alternative">
                         <div class="input-group-prepend">
-                            <span class="input-group-text"
+                            <span class="input-group-text input-group-textx"
                                 ><i class="fas fa-envelope"></i
                             ></span>
                         </div>
@@ -164,7 +150,6 @@
 )>
 
 <cfif isAuthenticated>
-<!---     <cfset session.userId = 1> --->
 
     <cfset session.username = username> <!-- Replace with actual user ID -->
 <!---     <cfdump var="#session#"> --->
