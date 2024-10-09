@@ -37,3 +37,4 @@ Some encrypting suggestions are: Argon2 or Bcrypt, combined with salt.
 Redo the admin section for adding products, and create an Edit product feature.
 Fix some other minor issues.
 Adding some error handling.
+*Fix - Found an issue with the total caculation / have to include sale price.
