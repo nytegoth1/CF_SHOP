@@ -33,11 +33,11 @@
 <cfset cartService = createObject("component", "Cart")>
 
 <cfif structKeyExists(cookie, "user")>
-        <cfquery name="userQuery" datasource="cfshopping_cart">
-            SELECT user_id FROM users
-            WHERE username = <cfqueryparam value="#cookie.user#" cfsqltype="cf_sql_varchar">
-        </cfquery>
-<!--- <cfdump var="#userQuery.user_id#"> --->
+  <cfquery name="userQuery" datasource="cfshopping_cart">
+      SELECT user_id FROM users
+      WHERE username = <cfqueryparam value="#cookie.user#" cfsqltype="cf_sql_varchar">
+  </cfquery>
+
 <cfset userId = userQuery.user_id> <!-- Replace with logged-in user ID -->
 </cfif>
 
@@ -45,9 +45,13 @@
 
 <cfoutput>
  <div class="container">
-    <h1>Shopping Cart    <cfset total = 0>
+    <h1><cfset total = 0>
 <cfloop query="cartItems">
+<cfif onsale gt 0>
+<cfset total = total + (sale_price * quantity)>
+<cfelse>
     <cfset total = total + (price * quantity)>
+</cfif>
 </cfloop>
 
 <cfif total eq 0>
@@ -55,36 +59,33 @@
 <cfelse>
 Total: $ #total#
 </cfif></h1>
-    <p><a href="index.cfm">HOME</a></p>
 
-
-        <cfloop query="cartItems">
-<form action="Cart.cfc?method=updateProducts" method="post">
-         <table class="table table-hover table-cart">
-  <thead>
-    <tr>
+  <cfloop query="cartItems">
+  <form action="Cart.cfc?method=updateProducts" method="post">
+    <table class="table table-hover table-cart">
+    <thead>
+      <cfif cartItems.onsale gt 0>
+        <div style="margin-left: 12px;">Sale Price: $#cartItems.sale_price#     was <strike>$#cartItems.price#</strike> </div>
+      <cfelse>
+        <div style="margin-left: 12px;">Price: $#cartItems.price#</div>
+      </cfif>
+      <tr>
       <th><img src="#cartItems.productimage#" class="img-thumbnail rounded float-start" alt="...">
       <input type="hidden" name="product_id" id="product_id" value="#cartItems.product_id#">
       <input type="hidden" name="userId" id="userId" value="#userQuery.user_id#">
       </th>
-      <th>Price: $#cartItems.price#</th>
-      <th><span>Quantity: <input type="text" class="" id="inputGroupFile01" value="#cartItems.quantity#" size="1" name="quantity"> <div class="spinner-border text-light visually-hidden" role="status">
+      <th><span>Quantity: <input type="text" class="" id="inputGroupFile01" value="#cartItems.quantity#" size="1" name="quantity"> <div class="spinner-border text-light visually-hidden" role="status">   
   <span class="visually-hidden">Loading...</span></div> </span></th>
       <th><button type="submit" class="btn btn-primary">Update</button></th>
     </tr>
-  </thead>
-  <tbody class="cart-items">
-    
-     
-  </tbody>
-</table>
-</form> 
-        </cfloop>
+    </thead>
+    <tbody class="cart-items">
+    </tbody>
+    </table>
+  </form> 
+  </cfloop>
     </div>
-
-<!---  <cfinclude  template="footer.cfm">    --->
-</cfoutput>
-<!---  <cfdump var="#userQuery.user_id#"> --->
+  </cfoutput>
 
 </body>
 </html>
