@@ -1,3 +1,19 @@
+
+<cfset cartService = createObject("component", "Cart")>
+
+<cfif structKeyExists(cookie, "user")>
+        <cfquery name="userQuery" datasource="cfshopping_cart">
+            SELECT user_id FROM users
+            WHERE username = <cfqueryparam value="#cookie.user#" cfsqltype="cf_sql_varchar">
+        </cfquery>
+<!--- <cfdump var="#userQuery.user_id#"> --->
+<cfset userId = userQuery.user_id> <!-- Replace with logged-in user ID -->
+
+<cfset cartItems = cartService.getCartTotals(userQuery.user_id)>
+</cfif>
+
+
+
 <cfoutput>
 
 <nav class="navbar navbar-expand-md sticky-top">
@@ -41,7 +57,7 @@
 
 </cfif></div>
       <div class="nav-item d-flex margleft">
-        <cfif structKeyExists(cookie, "user")> <a class="nav-link" href="cart.cfm"><span class="fas fa-shopping-cart"></span> View Cart</a></cfif>
+        <cfif structKeyExists(cookie, "user")> <a class="nav-link" href="cart.cfm"><span class="fas fa-shopping-cart"></span> View Cart</a> <cfif cartItems.TotalItemsOrdered GT 0>( #cartItems.TotalItemsOrdered# )</cfif></cfif>
       </div>
     </form>
     <form action="results.cfm" method="post">
