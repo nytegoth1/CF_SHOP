@@ -38,3 +38,6 @@ Redo the admin section for adding products, and create an Edit product feature.
 Fix some other minor issues.<br>
 ~~Adding some error handling.~~ <br>
 ~~*Fix - Found an issue with the total caculation / have to include sale price.~~
+
+## Screen Shot
+![alt text](https://github.com/nytegoth1/CF_SHOP/blob/main/screen2.png?raw=true)
