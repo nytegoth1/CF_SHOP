@@ -69,10 +69,14 @@
 <cfset uploadDir = expandPath('./uploads/')>
 <cfif isDefined("Form.FileContents") > 
 
+<cfset category = trim(form.category)>
 <cfset description = trim(form.description)>
 <cfset name = trim(form.name)>
 <cfset price = trim(form.price)>
 <cfset stock = trim(form.stock)>
+<cfset sale_price = trim(form.sale_price)>
+<cfset onsale = trim(form.onsale)>
+<cfset featured = trim(form.featured)>
 <cffile action = "upload" 
 fileField = "FileContents" 
 destination = "#uploadDir#" 
@@ -140,22 +144,7 @@ name="uploadForm" enctype="multipart/form-data">
 </cfif>
 
 <cfif cgi.request_method EQ "post">
-<!---     <cfdump var="#form#"> --->
+    <cfdump var="#form#">
     <cfinclude  template="process_upload.cfm">
     <cflocation url="index.cfm">
 </cfif>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
