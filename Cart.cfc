@@ -73,3 +73,4 @@
         </cfif>
         <cflocation url="cart.cfm">
     </cffunction>
+</cfcomponent>
