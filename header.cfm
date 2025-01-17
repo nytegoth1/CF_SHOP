@@ -1,4 +1,3 @@
-
 <cfset cartService = createObject("component", "Cart")>
 
 <cfif structKeyExists(cookie, "user")>
@@ -11,8 +10,12 @@
 
 <cfset cartItems = cartService.getCartTotals(userQuery.user_id)>
 </cfif>
+<cfif structKeyExists(form, "name")>
+<cfset name = form.name>
+<cfset searchService = createObject("component", "Product")>
 
-
+<cfset searchItems = searchService.getSearchItems(name)>
+</cfif>
 
 <cfoutput>
 
@@ -47,7 +50,6 @@
         </cfif>
       </li>
     </ul>
-    <form class="d-flex" role="search">
     <div class="welcome"><cfif NOT structKeyExists(cookie, "user")>
 <!---     <cflocation url="login.cfm"> --->
     Welcome back, Guest!
@@ -59,11 +61,10 @@
       <div class="nav-item d-flex margleft">
         <cfif structKeyExists(cookie, "user")> <a class="nav-link" href="cart.cfm"><span class="fas fa-shopping-cart"></span> View Cart</a> <cfif cartItems.TotalItemsOrdered GT 0>( #cartItems.TotalItemsOrdered# )</cfif></cfif>
       </div>
-    </form>
     <form action="results.cfm" method="post">
     <div class="row">
   <div class="input-group">
-    <input type="text" name="name" value="" class="form-control" placeholder="Search products..." required>
+    <input type="text" name="name" id="name" class="form-control" placeholder="Search products..." required>
     <div class="input-group-append">
       <button type="submit" class="searchbutton" type="button">
         <i class="fa fa-search"></i>
