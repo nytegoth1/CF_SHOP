@@ -29,6 +29,7 @@
 
 
     <cffunction  name="getSearchItems" access="public" returntype="query">
+        <cfargument name="name" type="string" required="true">
     <cftry>
         <cfquery name="ProductSearch" dataSource="cfshopping_cart">
             SELECT * FROM products WHERE (name LIKE '%#name#%' OR description LIKE '%#name#%');
