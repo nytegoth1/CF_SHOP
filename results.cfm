@@ -26,20 +26,6 @@
 
 <cfinclude  template="header.cfm">
 
-<cfoutput>
-<cfif NOT isDefined('name')>
-
-<cflocation url="index.cfm">
-
-</cfif>
-</cfoutput>
-
-
-<cfset name = trim(name)>
-<cfset searchService = createObject("component", "Product")>
-
-<cfset searchItems = searchService.getSearchItems(name)>
-
 <cfif searchItems.getRecordCount() eq 0>
     <div class="container">
         <div style="width:180px; margin:0 auto; margin-top:40px;">No Results Found</div>
