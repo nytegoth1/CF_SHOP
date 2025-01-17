@@ -17,7 +17,7 @@ Some encrypting suggestions are: Argon2 or Bcrypt, combined with salt.
 ## INSTALLATION
 
 1. Install ColdFusion Developement version.
-2. Istall MySQL
+2. Install MySQL
 3. In the ColdFusion admin, go to Data & Services
 4. Add data source named: cfshopping_cart, select valid driver type: MySql. Edit the created data source, and fill in your MySql info. ![alt text](https://github.com/nytegoth1/CF_SHOP/blob/main/cfadminscreen.jpg?raw=true)
 5. Use the provided dumped sql to install.
