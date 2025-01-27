@@ -5,8 +5,8 @@
             SELECT user_id FROM users
             WHERE username = <cfqueryparam value="#cookie.user#" cfsqltype="cf_sql_varchar">
         </cfquery>
-<!--- <cfdump var="#userQuery.user_id#"> --->
-<cfset userId = userQuery.user_id> <!-- Replace with logged-in user ID -->
+
+<cfset userId = userQuery.user_id>
 
 <cfset cartItems = cartService.getCartTotals(userQuery.user_id)>
 </cfif>
@@ -21,14 +21,14 @@
 
 <nav class="navbar navbar-expand-md sticky-top">
 <div class="container-fluid">
-  <a class="navbar-brand" href="index.cfm">WebSiteName</a>
+  <a class="navbar-brand" href="http://#CGI.HTTP_HOST#/CF_SHOP-main/">WebSiteName</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="##navb" aria-expanded="true">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div id="navb" class="navbar-collapse collapse hide">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="index.cfm">Home</a>
+        <a class="nav-link" href="http://#CGI.HTTP_HOST#/CF_SHOP-main/">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="">Women</a>
@@ -51,10 +51,8 @@
       </li>
     </ul>
     <div class="welcome"><cfif NOT structKeyExists(cookie, "user")>
-<!---     <cflocation url="login.cfm"> --->
     Welcome back, Guest!
     <cfelse>
-#cgi.http_referrer#
     Welcome back, #cookie.user#!
 
 </cfif></div>
